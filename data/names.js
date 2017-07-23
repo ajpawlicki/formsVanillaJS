@@ -1,0 +1,1 @@
+module.exports.names = ['AJ', 'Aloysius', 'Snow', 'Pawlicki', 'Parker', 'Al', 'Cubbies', 'Junior'];

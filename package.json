@@ -1,0 +1,24 @@
+{
+  "name": "forms-vanilla-js",
+  "version": "1.0.0",
+  "description": "Practice with forms and vanilla JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajpawlicki/formsVanillaJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajpawlicki/formsVanillaJS/issues"
+  },
+  "homepage": "https://github.com/ajpawlicki/formsVanillaJS#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
