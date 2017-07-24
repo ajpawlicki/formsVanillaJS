@@ -5,11 +5,11 @@ window.onload = () => {
   let namesList = document.getElementById('names-list');
 
   input.addEventListener('input', (event) => {
-    // console.log(input.value);
+    let trimmedInputValue = input.value.trim();
 
-    if (input.value.length > 0) {
-      $.get(`/getNames?input=${input.value}`, (requestedNames) => {
-        console.log(requestedNames);
+    if (trimmedInputValue.length > 0) {
+      $.get(`/getNames?input=${trimmedInputValue}`, (requestedNames) => {
+        // console.log(requestedNames);
       });
     }
 
