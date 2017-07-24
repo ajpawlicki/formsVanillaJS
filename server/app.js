@@ -6,12 +6,12 @@ let app = express();
 let bodyParser = require('body-parser');
 
 let names = require('../data/names').names;
+let filterNames = require('../workers/handlers').filterNames;
 
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+app.get('/getNames', filterNames);
 
 let port = 3000;
 
