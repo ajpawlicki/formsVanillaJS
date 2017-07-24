@@ -5,13 +5,14 @@ const app = express();
 
 const bodyParser = require('body-parser');
 
-const filterNames = require('../workers/handlers').filterNames;
+const getNames = require('../workers/handlers').getNames;
 const addName = require('../workers/handlers').addName;
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/getNames', filterNames);
+app.get('/getNames', getNames);
 
 app.post('/addName', addName);
 
