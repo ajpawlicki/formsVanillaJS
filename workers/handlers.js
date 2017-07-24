@@ -7,9 +7,13 @@ const filterNames = (req, res) => {
   let filteredNames = names.filter((name) => {
     return name.toLowerCase().indexOf(query.toLowerCase()) === 0;
   });
-  console.log(filteredNames);
 
   res.send(filteredNames);
 };
 
+const addName = (req, res) => {
+
+};
+
+module.exports.addName = addName;
 module.exports.filterNames = filterNames;

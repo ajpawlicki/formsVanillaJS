@@ -1,18 +1,21 @@
 'use strict';
 
-let express = require('express');
-let app = express();
+const express = require('express');
+const app = express();
 
-let bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
-let filterNames = require('../workers/handlers').filterNames;
+const filterNames = require('../workers/handlers').filterNames;
+const addName = require('../workers/handlers').addName;
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/getNames', filterNames);
 
-let port = 3000;
+app.post('/addName', addName);
+
+const port = 3000;
 
 app.listen(port);
 console.log(`Listening on port ${port}`);
