@@ -1,4 +1,5 @@
 'use strict';
+const names = require('../data/names').names;
 
 const filterNames = (req, res) => {
   let query = req.query.input;

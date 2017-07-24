@@ -5,7 +5,6 @@ let app = express();
 
 let bodyParser = require('body-parser');
 
-let names = require('../data/names').names;
 let filterNames = require('../workers/handlers').filterNames;
 
 app.use(bodyParser.json());
